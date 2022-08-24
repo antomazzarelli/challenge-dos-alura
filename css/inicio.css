@@ -1,0 +1,34 @@
+/* --------IMAGEN----------- */
+.img-game {
+    margin: 0 auto;
+}
+
+.img-start {
+    width: 370px;
+    margin: 50px;
+}
+
+/* -----Botones------------- */
+
+.buttons {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#iniciar {
+    background-color: rgb(45, 12, 76);
+    color: rgb(162, 186, 206);
+}
+
+#agregar {
+    background-color: rgb(218, 218, 218);
+    border: 0.5px solid rgb(142, 169, 190);
+}
+
+#iniciar:hover, #agregar:hover {
+    background: rgb(99, 79, 118);
+    color: black;
+    transform: scale(1.05, 1.05);
+}

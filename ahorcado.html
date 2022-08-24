@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Inter&family=Maven+Pro:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/btn-redes.css" />
+    <link rel="stylesheet" href="css/ahorcado.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/agregar.css" />
+    <title>Ahorcado</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="" class="title">Ahorcado</a>
+      </header>
+      <div class="game">
+        <div class="progreso">
+          <!-- Imagen del ahorcado -->
+          <div class="img-ahorcado">
+            <img src="img/0.png" id="ahorcado" alt="" />
+          </div>
+
+          <!-- Muestra intentos errados -->
+          <div class="contador-errores">
+            Intentos errados: <span id="errores">0</span> de <span>6</span>
+          </div>
+        </div>
+
+        <!-- Palabra que se debe adivinar -->
+        <div id="letras-usadas">Letras utilizadas: </div>
+        <div id="palabra-adivinar"></div>
+        <div id="status"></div>
+        <!-- Seccion teclado -->
+        <div id="keyboard" class="keyboard"></div>
+
+        <!-- Botones -->
+        <div class="buttons">
+          <div class="new-game">
+            <button class="btn" id="new-game" onClick="inicioJuego()">
+              Nuevo juego
+            </button>
+          </div>
+          <div class="desistir">
+            <a href="index.html">
+              <button class="btn" id="desistir">Desistir</button></a
+            >
+          </div>
+        </div>
+
+        <!-- Boton agregar palabra (modal) -->
+        <button id="add" class="btn">Agregar palabra</button>
+
+        <!-- Modal para ingresar una nueva palabra -->
+        <div id="myModal" class="modal">
+          
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="seccion-agregar">
+              <h3>Agregar nueva palabra</h3>
+              <main class="contenido-texto">
+                <div id="mensaje"></div>
+                <div id="registro-ok"></div>
+                <textarea
+                  name=""
+                  id="input-texto"
+                  cols="30"
+                  rows="10"
+                  class="input-texto"
+                  placeholder="Ingrese una palabra"
+                ></textarea>
+              </main>
+
+              <div class="guardar">
+                <button class="btn" id="guardar" onclick="guardarNuevaPalabra()">
+                  Guardar y comenzar
+                </button>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boton redes -->
+
+    <div class="link-redes">
+      <input type="checkbox" id="btn-mas" />
+      <div class="redes">
+        <a
+          href="https://www.linkedin.com/in/antonella-mazzarelli/"
+          target="”_blank”"
+          class="uil uil-linkedin-alt"
+        ></a>
+        <a
+          href="https://github.com/antomazzarelli"
+          target="”_blank”"
+          class="uil uil-github"
+        ></a>
+        <a
+          href="mailto:mazzarelliantonella97@gmail.com"
+          class="uil uil-envelopes"
+        ></a>
+      </div>
+      <div class="btn-mas">
+        <label for="btn-mas" class="uil uil-plus"></label>
+      </div>
+    </div>
+
+    <script src="js/ahorcado.js"></script> 
+    <script src="js/modal.js"></script>
+  </body>
+</html>
